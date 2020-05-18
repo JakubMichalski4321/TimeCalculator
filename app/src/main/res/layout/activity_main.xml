@@ -6,14 +6,33 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity">
-
-    <TextView
+    <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"/>
-
+            android:inputType="number"
+            android:ems="10"
+            tools:layout_editor_absoluteY="202dp" android:id="@+id/minutesSetEditText"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:hint="podaj garbackie minuty"/>
+    <Button
+            android:text="Oblicz"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/obliczButton"
+            app:layout_constraintTop_toBottomOf="@+id/minutesSetEditText" android:layout_marginTop="92dp"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
+    <TextView
+            android:text="Result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/resultText" android:textSize="48sp"
+            app:layout_constraintTop_toBottomOf="@+id/obliczButton" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" android:layout_marginTop="124dp"
+            app:layout_constraintHorizontal_bias="0.498"/>
+    <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="time"
+            android:ems="10"
+            tools:layout_editor_absoluteY="118dp" tools:layout_editor_absoluteX="99dp" android:id="@+id/timeEditText"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
