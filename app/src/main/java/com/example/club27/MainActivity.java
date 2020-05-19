@@ -1,5 +1,6 @@
 package com.example.club27;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -22,10 +23,18 @@ public class MainActivity extends AppCompatActivity {
         final String currentDate = DateFormat.getDateInstance(DateFormat.FULL).format(calendar.getTime());
         TextView textViewDate = findViewById(R.id.currentTimeView);
         textViewDate.setText(currentDate);
+        final MediaPlayer clockSound = MediaPlayer.create(this, R.raw.ticking_sound);
 
         obliczButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                clockSound.start();
+                try {
+                    Thread.sleep(3000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
                 EditText minutesSetEditText = (EditText) findViewById(R.id.minutesSetEditText);
 
                 int dayOfWeek = calendar.get(Calendar.DAY_OF_WEEK);

@@ -5,47 +5,57 @@
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity">
-    <TextView
-            android:layout_width="229dp"
-            android:layout_height="63dp"
-            android:id="@+id/resultText" android:textSize="48sp"
-            app:layout_constraintTop_toBottomOf="@+id/obliczButton"
-            android:textStyle="bold" android:gravity="center" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" android:layout_marginTop="24dp"
-    />
+        tools:context=".MainActivity"
+        android:background="@drawable/bg">
     <Button
             android:text="Oblicz"
             android:layout_width="221dp"
             android:layout_height="68dp"
             android:id="@+id/obliczButton"
-            app:layout_constraintTop_toBottomOf="@+id/minutesSetEditText" android:layout_marginTop="24dp"
-            android:textSize="18sp" android:textStyle="bold" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            android:textSize="18sp" android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/minutesSetEditText" android:layout_marginTop="16dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+            android:layout_width="303dp"
+            android:layout_height="42dp"
+            android:id="@+id/currentTimeView"
+            android:textSize="18sp"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/editText5" android:layout_marginTop="20dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="#ABFFFFFF"/>
+    <TextView
+            android:layout_width="271dp"
+            android:layout_height="63dp"
+            android:id="@+id/resultText" android:textSize="48sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/obliczButton"
+            android:layout_marginTop="32dp" app:layout_constraintHorizontal_bias="0.494" android:textColor="#FFFFFF"/>
     <EditText
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:text="Przelicznik Garbacki"
+            android:ems="10"
+            android:id="@+id/editText5"
+            android:typeface="normal" android:textSize="18sp"
+            android:textStyle="bold" android:background="#3F51B5"
+            android:gravity="center" app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
+    <EditText
+            android:layout_width="234dp"
+            android:layout_height="43dp"
             android:inputType="number"
             android:ems="10"
             android:id="@+id/minutesSetEditText"
             android:hint="podaj garbackie minuty"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" app:layout_constraintTop_toBottomOf="@+id/currentTimeView"
-            android:layout_marginTop="24dp"/>
-    <EditText
-            android:layout_width="412dp"
-            android:layout_height="54dp"
-            android:inputType="textPersonName"
-            android:text="Przelicznik Garbacki czas na normalny"
-            android:ems="10"
-            tools:layout_editor_absoluteY="-1dp" android:id="@+id/editText5" app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" android:typeface="normal" android:textSize="18sp"
-            android:textStyle="bold" android:background="#3F51B5"
-            android:gravity="center" app:layout_constraintHorizontal_bias="1.0"/>
-    <TextView
-            android:layout_width="303dp"
-            android:layout_height="42dp"
-            android:id="@+id/currentTimeView" app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" android:gravity="center" android:textSize="18sp"
-            app:layout_constraintTop_toBottomOf="@+id/editText5" android:layout_marginTop="24dp"/>
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@+id/currentTimeView" android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            android:textColor="#7C070707" android:background="#A6FFFFFF" android:textStyle="italic"/>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
