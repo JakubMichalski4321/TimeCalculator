@@ -19,6 +19,9 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        TextView titleTextView = findViewById(R.id.textViewTitle);
+        titleTextView.setEnabled(false);
+
         final Button calculateButton = findViewById(R.id.obliczButton);
         final Switch wasHeDrinkingSwitch = findViewById(R.id.byloPiteSwitch);
         final EditText minutesSetEditText = findViewById(R.id.minutesSetEditText);
