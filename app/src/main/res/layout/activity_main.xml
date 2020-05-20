@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".MainActivity"
-        android:background="@drawable/bg">
+        android:background="@drawable/garbacki_czas_bg">
     <Button
             android:text="Oblicz"
             android:layout_width="221dp"
@@ -14,8 +14,9 @@
             android:id="@+id/obliczButton"
             android:textSize="18sp" android:textStyle="bold"
             android:gravity="center"
-            app:layout_constraintTop_toBottomOf="@+id/minutesSetEditText" android:layout_marginTop="16dp"
-            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
+            app:layout_constraintTop_toBottomOf="@+id/minutesSetEditText" android:layout_marginTop="24dp"
+            app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.715"/>
     <TextView
             android:layout_width="303dp"
             android:layout_height="42dp"
@@ -33,7 +34,7 @@
             android:gravity="center"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintTop_toBottomOf="@+id/obliczButton"
-            android:layout_marginTop="32dp" app:layout_constraintHorizontal_bias="0.494" android:textColor="#FFFFFF"/>
+            android:layout_marginTop="20dp" android:textColor="#FFFFFF"/>
     <EditText
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -42,7 +43,7 @@
             android:ems="10"
             android:id="@+id/editText5"
             android:typeface="normal" android:textSize="18sp"
-            android:textStyle="bold" android:background="#3F51B5"
+            android:textStyle="bold" android:background="#D8FFFFFF"
             android:gravity="center" app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintEnd_toEndOf="parent" app:layout_constraintStart_toStartOf="parent"/>
     <EditText
@@ -56,6 +57,28 @@
             app:layout_constraintTop_toBottomOf="@+id/currentTimeView" android:layout_marginTop="24dp"
             app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent"
             android:textColor="#7C070707" android:background="#A6FFFFFF" android:textStyle="italic"/>
+    <Switch
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/byloPiteSwitch" android:textColor="#FFFFFF"
+            android:textColorHint="#A8D30909" android:background="#74FFFFFF" tools:checked="false"
+            android:checked="false"
+            android:fadingEdge="none" android:textColorLink="#BCE00404" android:textAllCaps="false"
+            android:textIsSelectable="false" app:layout_constraintTop_toBottomOf="@+id/byloPiteTextView"
+            app:layout_constraintBottom_toTopOf="@+id/resultText"
+            app:layout_constraintEnd_toStartOf="@+id/obliczButton" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintHorizontal_bias="0.515" app:layout_constraintVertical_bias="0.0"
+            android:textCursorDrawable="@color/colorAccent"/>
+    <TextView
+            android:text="było pite?"
+            android:layout_width="84dp"
+            android:layout_height="22dp"
+            android:id="@+id/byloPiteTextView" android:textColor="#D7FFFFFF"
+            android:gravity="center" android:textColorHint="#AEFFFFFF" android:textColorLink="#75FFFFFF"
+            app:layout_constraintEnd_toStartOf="@+id/obliczButton" app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/minutesSetEditText"
+            app:layout_constraintBottom_toTopOf="@+id/resultText" app:layout_constraintHorizontal_bias="0.519"
+            app:layout_constraintVertical_bias="0.34" android:textStyle="bold"/>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
